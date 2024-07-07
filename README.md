@@ -53,7 +53,7 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 ### index HTML
 [index HTML](doc/lede_project.index.html) - an index html (click this to move to the website)
 ### images files etc for the website
-[doc](doc) - a folder to store necessary png files and everything
+[doc](doc) - a folder to store necessary png files and everything (everything you need to operate the website is here)
 ### jupyter notebook
 [code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
 ### data 
