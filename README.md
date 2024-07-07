@@ -47,8 +47,8 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 
 # About this repository
 
-### webpage
-[webpage](doc/lede_project.index.html) - a index html to open a webpage
+### index HTML
+[index HTML](doc/lede_project.index.html) - an index html
 ### jupyter notebook
 [code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
 ### data 
