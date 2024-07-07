@@ -45,12 +45,15 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 2. Adding interactive functions to experience the increasing complexity of Japanese names
 3. Analyzing data from different angle (is there a trend for the meaning of Chinese character used in Japanese names?)
 4. Interviewing experts on this area and parents who have a child
-   
+5. Revising my scraping code (I had to manually input top 10 popular names for men in 1946)
+6. Last but no least, thoroughly check data and articles for errors
 
 # About this repository
 
 ### index HTML
 [index HTML](doc/lede_project.index.html) - an index html (click this to move to the website)
+### images files etc for the website
+[doc](doc) - a folder to store necessary png files and everything
 ### jupyter notebook
 [code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
 ### data 
