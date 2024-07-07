@@ -37,7 +37,7 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 3. Using Ezgif to edit GIF was new skill
    <br>
    https://ezgif.com/
-4. Creating a webpage was new skill
+4. Creating a website was new skill
 5. Creating a github page with detailed necessary info was new skill
 
 # A section about things you tried to do or wanted to do but did not have the skills/time (but if you have more time you might do)
@@ -50,7 +50,7 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 # About this repository
 
 ### index HTML
-[index HTML](doc/lede_project.index.html) - an index html
+[index HTML](doc/lede_project.index.html) - an index html (click this to move to the website)
 ### jupyter notebook
 [code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
 ### data 
