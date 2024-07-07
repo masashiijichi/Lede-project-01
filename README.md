@@ -35,6 +35,8 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 3. Using Ezgif to edit GIF was new skill
    <br>
    https://ezgif.com/
+4. Creating a webpage was new skill
+5. Creating a github page with detailed necessary info was new skill
 
 # A section about things you tried to do or wanted to do but did not have the skills/time (but if you have more time you might do)
 1. Adding scrolly function
@@ -49,4 +51,11 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 [webpage](doc/lede_project.index.html) - a index html to open a webpage
 ### jupyter notebook
 [code 1](JPN_baby_name.ipynb) -  a Python file to scrape data from HTML website, to access API and to analyze dataset
-### data
+### data 
+[main data](data/jpnbabyname0704.xlsx) - an excel file with all the data
+<br>
+[stroke data](data/jpbaby_gender_stroke.xlsx) - an excel file for stroke data fit for flourish format
+<br>
+[reading data](data/jpbaby_gender_reading.xlsx) - an excel file for reading data fit for flourish format
+<br>
+*all the data are stored in excel format in case encoding for various Japanese/Chinese letters don't work in csv format
