@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reading Japanese baby’s name is getting harder</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="scrolly-styles.css" rel="stylesheet">
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollama/3.2.0/scrollama.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.3.0/d3.min.js"></script>
+
+    <style>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('background_adobe.png') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.05;
+            z-index: -1;
+        }
+
+        .content {
+            max-width: 640px;
+            margin: auto;
+            background: rgba(255, 255, 255, 1);
+            padding: 20px;
+        }
+
+        .header {
+            padding: 3em 0;
+        }
+
+        a {
+            color: #f05349;
+        }
+
+        .footer {
+            background: #f4f4f4;
+            text-align: center;
+            font-size: 0.8em;
+            margin-top: 4em;
+            padding: 4em 0;
+        }
+
+        figure {
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        figcaption {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 0.5em;
+            color: #666;
+        }
+
+        h1 {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: bold;
+            font-size: 3em;
+            line-height: 1.1;
+        }
+
+        .subhead {
+            font-family: 'Lora', Georgia, serif;
+        }
+
+        iframe,
+        img,
+        video {
+            max-width: 100%;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0;
+            padding-bottom: 1.2em;
+        }
+
+        .full-width figure {
+            text-align: center;
+        }
+
+        ul {
+            margin: 0;
+            padding-bottom: 1em;
+            line-height: 1.6;
+        }
+
+        iframe {
+            padding-bottom: 1.2em;
+        }
+
+        code {
+            font-family: 'Courier New', monospace;
+            background: #fff880;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                font-size: 18px;
+            }
+
+            .content {
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+            }
+        }
+
+        .png-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .png-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .gif-container img {
+            max-width: 45%;
+            height: auto;
+        }
+
+       
+
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .step {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Reading Japanese baby’s name is getting harder</h1>
+            <h3>Government decided to ask citizens to clarify how to read</h3>
+            <div class="gif-container">
+                <img src="https://kakijun.jp/gif/0459200.gif" alt="Animated GIF 1">
+                <img src="https://kakijun.jp/gif/0575200.gif" alt="Animated GIF 2">
+            </div>
+            <p><small>GIF images showing stroke order for writing Japan ('日本') in Chinese character</small></p>
+
+            <div class="byline">
+                <p>By <a href="https://www.nikkei.co.jp/saiyo/jobs/jobs05.html">Masashi Ijichi</a></p>
+            </div>
+            <p><small>Homework for Lead Program (not copyrighted by Nikkei)</small></p>
+            <p>The Japanese government will require all citizens to report the reading of their names in the family register starting in the spring of 2025. This is in response to the increasing number of newborn baby names that differ from the original reading of Chinese character, which is widely used for Japanese name.</p>
+            <div class="png-container">
+                <img src="koseki_kirakira_kamikawan_nikkei.png" alt="kamikawa">
+            </div>
+            <p><small>The Minister of Justice consults with the Legislative Council on amending the Family Registration Law and ministerial ordinances to add reading to names in the family register (2021, Kyodo)</small></p>
+            <div class="centered-iframe">
+                <h4>Increasing number of strokes per name</h4>
+                <p>According to Meiji Yasuda, a major Japanese life insurance company, Chinese characters used in names are also becoming more complex. The number of strokes continues to increase, with the latest data showing an increase of 3.3 strokes to 14.4 for males compared to 1912, when statistics began.</p>
+                <div class="gif-container">
+                    <img src="you.gif" alt="Animated GIF 3">
+                    <img src="https://kakijun.jp/gif/12188200.gif" alt="Animated GIF ４">
+                </div>
+                <p>The male name with the most strokes in 2023 was '陽翔', with 24 strokes.</p>
+                <div class="gif-container">
+                    <img src="bu.gif" alt="Animated GIF 5">
+                    <img src="https://kakijun.jp/gif/12230200.gif" alt="Animated GIF 6">
+                </div>
+                <p>The male name with the most strokes in 1912 was '武雄', with 20 strokes.</p>
+
+              
+                <div class="gif-container">
+                    <img src="https://kakijun.jp/gif/0302200.gif" alt="Animated GIF 8">
+                    <img src="https://kakijun.jp/gif/0978200.gif" alt="Animated GIF 9">
+                </div>
+                <p>The male name with the most strokes in 1923 was '三郎', with only 12 strokes.</p>
+                <p>The rate of increase was greater for women, with the average number of strokes in 2023 at 18.3, more than doubling since 1912. In Japan at that time, Chinese characters were largely considered to be for men, and women's names were often written using characters called Katakana, which represent only sounds.</p>
+                <iframe src='https://flo.uri.sh/visualisation/18624056/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+            </div>
+            <p>Some of the female names using Katakana that were popular in 1912, like 'ハル', had only four strokes.</p>
+            <div class="gif-container">
+                <img src="ha-ezgif.com-effects.gif" alt="Animated GIF 10">
+                <img src="ru-ezgif.com-effects.gif" alt="Animated GIF 11">
+            </div>
+            <p>However, the latest 2023 data show that the complexity of women's names surpasses that of men. The name with the most strokes is '結愛', with 25 strokes.</p>
+  
+            <div class="gif-container">
+                <img src="yuu.gif" alt="Animated GIF 12">
+                <img src="ai.gif" alt="Animated GIF 13">
+            </div>
+            <h4>Names become more and more difficult to read  </h4>
+            <p>As the number of strokes increased, the reading of names became more complex. One hundred years ago there was mostly only one reading for the most popular male name '清'. The reading was simply "Kiyoshi".</p>
+
+            <ul>清 (Popular name from 1923)
+                <li>1. Kiyoshi</li>
+            </ul>
+            <p>However, some of the most popular names in 2023 have more than five readings. For '陽翔' in particular, it has as much as 10 different readings.</p>
+            <ul>
+                陽翔 (Popular name from 2023)
+                <li>1. Haruto</li>
+                <li>2. Hinato</li>
+                <li>3. Hinata</li>
+                <li>4. Hikaru</li>
+                <li>5. Hiroto</li>
+                <li>6. Akito</li>
+                <li>7. Haruhi</li>
+                <li>8. Hyouga</li>
+                <li>9. Hibito</li>
+                <li>10. Yamato</li>
+            </ul>
+            <iframe src='https://flo.uri.sh/visualisation/18624152/embed' title='Interactive or visual content' class='flourish-embed-iframe' frameborder='0' scrolling='no' style='width:100%;height:600px;' sandbox='allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation'></iframe>
+
+            
+            <p>Name readings have increased dramatically since 2000 followed by the trend of increasing strokes. That was the year that popular actor Takuya Kimura named his daughter 心実 (Cocomi). The idea of having the original reading omitted or altered in part was new at the time.</p>
+            <div class="png-container">
+                <img src="kimuratakuya_cocomi_instagram.png" alt="cocomi">
+            </div>
+            <p><small>Cocomi (pictured right) posted an old photo on Instagram on her birthday taken with her father, Takuya Kimura (2020, @cocomi_553_official)</small></p>
+            <p>That number peaked in 2015 when it recorded 5.9, but remains high.  In recent years, the increase in the number of complex names and how they are read has become a social issue.</p>
+
+            <p>In Japanese workplaces and schools, after verbal self-introductions, people often have to ask how to write name in Chinese character.</p>
+            <h4>The government recognized the challenges of not knowing how to read the names of its own citizens</h4>
+            <p>All citizens are required to notify the municipality of their legal domicile within one year of the enactment of the law. The standard for reading characters different from those originally used in Chinese character has been established as "those generally accepted as the reading of characters used in names".</p>
+            <div class="png-container">
+                <img src="newidformat.png" alt="New ID Format">
+            </div>
+            <p><small>Government document proposing a format for how to add readings to family registry information.  There is a note that reading needs to be added.</small></p>
+            <p>The new system will not allow readings that (1) have the opposite meaning of the Chinese character, (2) it is not clear whether or not they are misread, and (3) are not associated with the meaning or reading of the Chinese character.</p>
+            <h4>----------------------------------------------</h4>
+            <h4>Sources and Methodology</h4>
+            <p>The data for popular names was obtained from the name ranking of Meiji Yasuda. The kanjiAPI was used to calculate the number of strokes for each name. GIF images of Chinese character and Katakana were obtained from the following websites, https://kakijun.jp/, https://www.writehiragana.de/katakana.html respectively, and the GIF images were partially edited for color and image assignment.</p>
+        </div>
+   
+</body>
+
+
+</body>
+
+</html>
