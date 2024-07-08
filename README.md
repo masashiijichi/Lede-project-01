@@ -51,7 +51,7 @@ Newborn Japanese baby name is getting more and more complexed.  The number of st
 # About this repository
 
 ### index HTML
-[index HTML](doc/lede_project.index.html) - an index html (click this to move to the website)
+[index HTML](doc/lede_project.index.html) - an index html
 ### images files etc for the website
 [doc](doc) - a folder to store necessary png files and everything (everything you need to operate the website is here)
 ### jupyter notebook
