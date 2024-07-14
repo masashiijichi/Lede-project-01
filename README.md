@@ -1,7 +1,5 @@
 # lede-project-01
-This is project-01 homework for lede program.  You can find my work in the website.
-<br>
-[URL to website](https://masashiijichi.github.io/lede-project-01-website/doc/lede_project.index.html)
+This is project-01 homework for lede program.  You can find my work in this [website](https://masashiijichi.github.io/lede-project-01-website/doc/lede_project.index.html)
 
 # Title
 Reading Japanese baby’s name is getting harder
