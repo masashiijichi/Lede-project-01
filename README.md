@@ -1,3 +1,4 @@
+![Front pange of the website](project01_front_screenshot.png)
 # lede-project-01
 This is project-01 homework for lede program.  You can find my work in this [website](https://masashiijichi.github.io/lede-project-01-website/doc/lede_project.index.html).
 
